@@ -29,13 +29,13 @@ export default class NodeMailer {
 
     }
 
-    public async sendEmail(to: string, message: string, assunto: string) {
+    public async sendEmail(to: string, message: string) {
         try {
             let info = await this.transporter!.sendMail({
                 date: Date(),
-                encoding: "utf-8", from: "Test Ramon Paolo", to, text: message, subject: assunto
+                encoding: "utf-8", from: "Newslleter Ramon Paolo", to, text: message, subject: "Subscription Newsletter"
             })
-            console.log(info)
+            // console.log(info)
             return await info;
         } catch (err) {
             return err
