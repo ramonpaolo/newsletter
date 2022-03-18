@@ -8,6 +8,7 @@ body {
   align-items: center;
   font-family: "Roboto", sans-serif;
   background: linear-gradient(45deg, #fead06, #c00def);
+  box-sizing: border-box;
 }
 
 h1 {
@@ -36,8 +37,6 @@ h1 {
 }
 
 .app {
-  width: 20%;
-  height: 30%;
   border: 1px solid lightgrey;
   border-radius: 12px;
   background-color: white;
@@ -53,7 +52,6 @@ label {
 }
 
 label:first-child {
-  /* margin-bottom: 32px; */
   margin-top: 32px;
 }
 
@@ -63,7 +61,7 @@ input {
   border-radius: 8px;
   padding: 8px;
   width: 90%;
-  /* width: 340px; */
+  margin-left: 8px;
   outline: none;
 }
 
