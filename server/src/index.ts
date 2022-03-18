@@ -23,12 +23,10 @@ app.set("view engine", "ejs")
 app.use(express.static(path.join(__dirname, "..", "views", "styles")))
 
 app.route("/").get(async (req, res) => {
-
-    // res.status(200).json({ status: "success" })
     res.render("index.ejs")
 }).post(async (req, res) => {
-    const {name, email } = req.body
-    await nodeMailer.sendEmail(email, `Olá ${name}`, "Subscription Newsletter")
+    const {name, email }: {name: string, email: string} = req.body
+    await nodeMailer.sendEmail(email, `Olá ${name}`)
     res.status(200).json({ status: "success" })
 })
 
