@@ -48,8 +48,20 @@
 
       var error = null;
 
+      var style = window.getComputedStyle(
+        document.getElementsByClassName("app").item(0),
+        null
+      );
+      var heightElement = parseFloat(style.getPropertyValue("height"));
+
+      var element = document.getElementsByClassName("app").item(0);
+
+      window.addEventListener("resize", (e) => {
+        element.style.setProperty("height", `${heightElement}px`, "important");
+      });
+
       button.addEventListener("click", async (e) => {
-        console.log("Uepa");
+        if (!validation()) return;
         await fetch(window.location.href, {
           method: "POST",
           headers: {
@@ -70,6 +82,38 @@
             error = true;
           });
       });
+
+      function validation() {
+        if (emailUser.value === "") {
+          alert("Email vazio");
+          return false;
+        }
+
+        if (nameUser.value === "") {
+          alert("Nome vazio");
+          return false;
+        }
+
+        if (nameUser.value.length <= 3) {
+          alert("Nome pequeno");
+          return false;
+        }
+
+        if (emailUser.value.length <= 14) {
+          alert("Email pequeno");
+          return false;
+        }
+
+        if (
+          !emailUser.value.includes("@") ||
+          !emailUser.value.includes(".com")
+        ) {
+          alert("Não é email");
+          return false;
+        }
+
+        return true;
+      }
     </script>
   </body>
 </html>
