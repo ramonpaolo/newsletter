@@ -26,7 +26,7 @@ app.route("/").get(async (req, res) => {
     res.render("index.ejs")
 }).post(async (req, res) => {
     const {name, email }: {name: string, email: string} = req.body
-    await nodeMailer.sendEmail(email, `Olá ${name}`)
+    await nodeMailer.sendEmail(email, `Olá ${name.split(" ")[0]}`)
     res.status(200).json({ status: "success" })
 })
 
