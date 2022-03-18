@@ -1,57 +1,83 @@
 body {
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "Roboto", sans-serif;
-    background: linear-gradient(45deg, #fead06, #c00def);
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(45deg, #fead06, #c00def);
+}
+
+h1 {
+  animation: animationTextLinearGradient 1.5s alternate ease-in-out infinite;
+
+  background-image: linear-gradient(-90deg, #fead06, #c00def);
+  background-size: 300%;
+
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  text-align: center;
+
+  margin-top: 12px;
+}
+
+@keyframes animationTextLinearGradient {
+  0% {
+    background-position: 0%;
   }
 
-  .app{
-      width: 20%;
-      height: 30%;
-      border: 1px solid lightgrey;
-      border-radius: 12px;
-      background-color: white;
-      padding: 24px;
-      box-shadow: 40px 40px 302px rgba(191, 191, 191, 0.5);
+  100% {
+    background-position: 100%;
   }
+}
 
-  label {
-    display: block;
-    font-size: 16px;
-  }
-  label:first-child {
-    margin-bottom: 32px;
-  }
+.app {
+  width: 20%;
+  height: 30%;
+  border: 1px solid lightgrey;
+  border-radius: 12px;
+  background-color: white;
+  padding: 24px;
+  box-shadow: 40px 40px 302px rgba(191, 191, 191, 0.5);
+}
 
-  input {
-    display: block;
-    border: 1px lightgrey solid;
-    border-radius: 8px;
-    padding: 8px;
-    width: 90%;
-    /* width: 340px; */
-    outline: none;
-  }
+label {
+  display: block;
+  font-size: 16px;
+  margin-top: 18px;
+  margin-bottom: 4px;
+}
 
-  label:first-child{
-      margin-top: 32px;
-  }
+label:first-child {
+  /* margin-bottom: 32px; */
+  margin-top: 32px;
+}
 
-  button {
-    margin-top: 8vh;
-    border: 1px solid black;
-    border-radius: 24px;
-    padding: 12px 24px;
-    font-size: 16px;
-    background-color: white;
-    cursor: pointer;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-  }
+input {
+  display: block;
+  border: 1px lightgrey solid;
+  border-radius: 8px;
+  padding: 8px;
+  width: 90%;
+  /* width: 340px; */
+  outline: none;
+}
+
+button {
+  margin-top: 8vh;
+  border: 1px solid black;
+  border-radius: 24px;
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: white;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  outline: none;
+}
