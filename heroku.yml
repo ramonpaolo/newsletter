@@ -1,3 +1,3 @@
 build:
   docker:
-    web: docker/backend.dockerfile
+    web: ./docker/backend.dockerfile
