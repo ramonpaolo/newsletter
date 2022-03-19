@@ -10,4 +10,4 @@ COPY /server/ ./
 
 RUN yarn install && yarn build
 
-CMD [ "yarn start" ]
+CMD [ "yarn", "start" ]
