@@ -8,6 +8,6 @@ EXPOSE 3000
 
 COPY / ./
 
-RUN yarn && yarn build
+RUN yarn install
 
 CMD [ "yarn", "start" ]
