@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "prestart": "tsc",
+    "prestart": "yarn install && tsc",
     "start": "node ./dist/index.js",
     "dev": "ts-node ./src/index.ts"
   },
