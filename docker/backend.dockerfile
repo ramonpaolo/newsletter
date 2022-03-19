@@ -6,7 +6,7 @@ WORKDIR /app
 
 EXPOSE 3000
 
-COPY /server/ ./
+COPY / ./
 
 RUN yarn install && yarn build
 
